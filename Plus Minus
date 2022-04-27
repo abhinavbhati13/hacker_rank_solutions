@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+float n,j,a[100],counto=0,countpo=0,countne=0,pr,nr,or;
+int i;
+    scanf("%f",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==0)
+        counto++;
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]<0)
+        countne++;
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>0)
+        countpo++;
+    }
+    pr=countpo/n;
+    nr=countne/n;
+    or=counto/n;
+    printf("%f \n %f \n %f",pr,nr,or);
+    
+}
