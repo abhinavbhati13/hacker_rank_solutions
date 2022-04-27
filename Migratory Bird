@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,n,a[200000],s[6]={0},count=0,min,max;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+   /* for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+         if(a[i]==a[j])
+                count++;
+        }
+        s[i]=count;
+    }
+    max=s[0];
+    for(i=0;i<n;i++)
+    {
+   if(max<s[i])
+     max=s[i];   
+    }
+    printf("%d",max);*/
+    for(i=0;i<n;i++)
+    {
+        s[a[i]]++;
+    }
+    int m1=s[1],m2;
+    for(i=1;i<=5;i++)
+    {
+      if(s[i]>m1)
+      {
+          j=i;
+          m1=s[i];
+      }  
+    }
+    
+    printf("%d",j);
+    
+}
